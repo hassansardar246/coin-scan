@@ -1,0 +1,29 @@
+/* Related to Home page and header */
+.headersearch-input::placeholder {
+  color: rgb(53, 58, 62);
+  font-size: 13px;
+}
+.cards-heading-alignments {
+  margin-top: 0;
+  margin-left: 10px;
+  text-align: start;
+}
+
+/* Related to add coins page */
+.addcoinsfeilds::placeholder,
+.addcoinsdatepicker::placeholder,
+.addcoinstextarea::placeholder {
+  color: #323232;
+  font-size: 14px;
+}
+
+/* Related to coin description page  */
+.coindetilasbutton {
+  padding: 10px 10px;
+}
+/* Media query for screen sizes larger than 'md' */
+@media (min-width: 768px) {
+  .coindetilasbutton {
+    padding: 15px 6px;
+  }
+}

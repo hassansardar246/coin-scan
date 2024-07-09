@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #0b090d;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .sticky-column {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background-color: #0b090d;
+  }
+
+  .second-sticky-column {
+    left: -10px;
+  }
+
+  .third-sticky-column {
+    left: 40px;
+  }
+
+  .first-sticky {
+    left: -10px;
+  }
+
+  .second-sticky {
+    left: 40px;
+  }
+}
