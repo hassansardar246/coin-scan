@@ -116,7 +116,7 @@ const BestRecords = () => {
 
   return (
     <div className="flex flex-wrap md:flex-nowrap justify-between gap-5 ">
-      <div className="my-10 w-[100%] min-w-[75%] lg:w-[75%] h-full relative">
+      <div className="my-10 w-[100%] lg:w-[75%] h-full relative">
         {/* <img
         src={glow}
         alt="Glow"
@@ -159,7 +159,7 @@ const BestRecords = () => {
           promoted={true}
         />
       </div>
-      <div className="my-10 lg:w-[25%] min-w-[400px] w-[100%]">
+      <div className="my-10 lg:w-[25%] md:min-w-[400px] w-[100%]">
         <BasicTab />
         {/* <SideTable
           coins={currentData?.coins}
