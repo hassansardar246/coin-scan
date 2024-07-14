@@ -13,6 +13,7 @@ import { useNavigate } from "react-router-dom";
 import useWindowSize from "../../hooks/useWindowSize";
 import { FaSort, FaSortDown, FaSortUp } from "react-icons/fa";
 import { CiStar } from "react-icons/ci";
+import { FaStar } from "react-icons/fa6";
 const Table = ({
   header,
   coins = [],
@@ -101,7 +102,12 @@ const Table = ({
             <td
               className={`text-text-light text-sm flex w-full min-w-[50px] items-center justify-center gap-3`}
             >
-              <CiStar className="w-5 h-5" /> {index + 1}
+              {promoted && item?.promoted ? (
+                <FaStar className="w-5 h-5 fill-yellow-300" />
+              ) : (
+                <CiStar className="w-5 h-5" />
+              )}
+              {index + 1}
             </td>
 
             <td className="text-text-light text-xs max-w-60 min-w-[150px] md:text-sm p-2 px-0 ">

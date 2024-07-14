@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="relative">
+      <div className="">
         {/* <img
           src={glow}
           alt="Glow"
@@ -41,7 +41,10 @@ const Header = () => {
         </div>
       </div>
       <Outlet />
-      <Footer />
+      {/* <div className="my-60"></div> */}
+      <div>
+        <Footer />
+      </div>
     </>
   );
 };

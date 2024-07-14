@@ -1,14 +1,11 @@
 import React from "react";
 import { IoCartOutline } from "react-icons/io5";
 import useDateStore from "../Store";
+import { Link } from "react-router-dom";
 
 function Order() {
-  const { selectedDates, subTotal, discount, total, toggleDate } =
+  const { selectedDates, subTotal, discount, total, toggleDate, deleteItem } =
     useDateStore();
-  const flattenSelectedDates = (selectedDate) => {
-    return Object.values(selectedDate).flat();
-  };
-  const flattenedDates = flattenSelectedDates(selectedDates);
 
   const style = {
     boxSizing: "border-box",
@@ -59,16 +56,19 @@ function Order() {
               <span className="mr-10 text-white">PRICE</span>
             </header>
             <main class="flex flex-col text-white gap-3 px-3">
-              {flattenedDates?.map((date, i) => (
+              {selectedDates?.map((date, i) => (
                 <div
                   key={i}
-                  className="flex items-start justify-between w-full p-4 text-sm font-medium bg-secondary bg-opacity-30  xl:text-base"
+                  className="flex items-start justify-between w-full md:p-4 text-sm font-medium bg-secondary bg-opacity-30  xl:text-base"
                 >
                   <span>{date?.date}</span>
                   <span className="">{date?.type}</span>
                   <div className="flex items-center gap-3">
                     <span>{date?.p_value}$</span>
-                    <div className="flex items-center justify-center w-6 h-6 rounded-full cursor-pointer bg-secondary bg-opacity-20">
+                    <div
+                      onClick={() => deleteItem(i)}
+                      className="flex items-center justify-center w-6 h-6 rounded-full cursor-pointer bg-secondary bg-opacity-20"
+                    >
                       <svg
                         stroke="currentColor"
                         fill="currentColor"
@@ -135,7 +135,7 @@ function Order() {
                 </span> */}
                 <IoCartOutline />
               </span>
-              <span>Reserve &amp; Pay</span>
+              <Link to="/checkout">Reserve &amp; Pay</Link>
             </div>
           </button>
           {/* <p class="text-base font-medium text-white ">No login required*</p> */}

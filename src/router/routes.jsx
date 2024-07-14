@@ -11,6 +11,7 @@ import NewListing from "../views/newListing/NewListing";
 import UpcomingParesale from "../views/upcomingParesale/UpcomingParesale";
 import PreSale from "../views/pre-sale/PreSale";
 import Index from "../views/advertisement/Index";
+import CheckOutPage from "../components/CheckOutPage";
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <>
@@ -18,6 +19,7 @@ export const router = createBrowserRouter(
         <Route index element={<Home />} />
         <Route path="new-coins" element={<NewCoin />} />
         <Route path="advertisement" element={<Index />} />
+        <Route path="checkout" element={<CheckOutPage />} />
         <Route path="new-listing" element={<NewListing />} />
         <Route path="pre-sale" element={<PreSale />} />
         <Route path="upcoming-paresale" element={<UpcomingParesale />} />
