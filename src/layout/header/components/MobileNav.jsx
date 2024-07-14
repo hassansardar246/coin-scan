@@ -48,7 +48,7 @@ const MobileNav = ({ isOpen, setIsOpen }) => {
             />
             Play WOTF
           </Link>
-          <Link to="/advertisement">
+          <Link onClick={handleClose} to="/advertisement">
             <div className="relative text-white">
               <a>Advertise</a>
               <div className="absolute top-0 right-0 -mt-3 -mr-5">

@@ -72,7 +72,7 @@ const BestRecords = () => {
   };
 
   const buttonClass = (button) => {
-    return `font-[700] text-white text-[14px] md:text-[16px] px-3 md:px-3 py-1 rounded-md cursor-pointer ${
+    return `font-[700] text-white text-[14px] md:text-[16px] min-w-[105px] px-2 md:px-3 py-1 rounded-md cursor-pointer ${
       active === button ? "bg-[#ad00ff]" : "border-border-mainBorder border"
     }`;
   };
@@ -89,6 +89,7 @@ const BestRecords = () => {
           toast.success("Vote added successfully", {
             position: "top-center",
           });
+
           todayBestRefetch();
           allTimeBestRefetch();
         })
@@ -132,7 +133,7 @@ const BestRecords = () => {
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               </span>
 
-              <div className=" flex items-center gap-2 md:gap-3 mb-10">
+              <div className=" flex items-center w-full gap-2 md:gap-3 mb-10">
                 <DropDown onClick={HandleCategory} />
                 <div className="flex">
                   <span

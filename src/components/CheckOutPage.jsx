@@ -12,7 +12,7 @@ function CheckOutPage() {
               <input
                 type="text"
                 disabled
-                className=" py-2.5 px-8 bg-secondary bg-opacity-30 text-white text-opacity-50 font-light text-base w-[490px]"
+                className=" py-2.5 px-8 bg-secondary bg-opacity-30 text-white text-opacity-50 font-light text-base w-full xl:w-[490px]"
               />
               <button
                 type="button"
@@ -22,7 +22,7 @@ function CheckOutPage() {
               </button>
             </div>
           </section>
-          <section className="bg-secondary my-5 bg-opacity-30 px-10 py-8 flex items-center gap-32 w-full xl:w-[310px]">
+          <section className="bg-secondary my-5 bg-opacity-30 px-10 py-8 flex items-center justify-between sm:gap-32 w-full xl:w-[310px]">
             <div className="flex flex-col gap-6">
               <span className="text-lg font-medium text-whitefont-archivo leading-20px">
                 Status
@@ -37,6 +37,7 @@ function CheckOutPage() {
                 display: "inline-block",
                 overflow: "hidden",
                 width: "100%",
+                minWidth: "40px",
                 height: "100%",
                 background: "none",
                 opacity: 1,
@@ -44,7 +45,7 @@ function CheckOutPage() {
                 margin: 0,
                 padding: 0,
                 position: "relative",
-                maxWidth: "100%",
+                maxWidth: "40px",
               }}
             >
               <img

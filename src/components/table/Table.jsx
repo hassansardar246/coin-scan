@@ -41,7 +41,7 @@ const Table = ({
   };
 
   const currentColumns = columns;
-
+  console.log("currentColumns", votingStatus[133]);
   const requestSort = (key) => {
     let direction = "ascending";
     if (sortConfig.key === key && sortConfig.direction === "ascending") {
@@ -153,21 +153,36 @@ const Table = ({
             >
               {item?.launch_date == "" ? "__" : formatDate(item?.launch_date)}
             </td>
-            <td
-              className="text-text-light text-sm flex items-center justify-center min-w-[50px]"
-              onClick={(e) => {
-                e.stopPropagation(); // Prevents navigating when clicking on the vote section
-                handleVote(e, item?.id);
-              }}
-            >
-              <div className="text-text-light text-sm min-w-[70px] mt-[7px] border-2 border-text-primary flex items-center justify-center gap-1 rounded-md px-2 py-2 w-32">
-                <img src={heartFill} alt="Vote" />
-                {votingStatus[item?.id] ? (
-                  <Text>Voting..</Text>
-                ) : (
-                  <Text>{item?.total_votes || 0}</Text>
-                )}
-              </div>
+            <td className="text-text-light text-sm flex items-center justify-center min-w-[50px]">
+              {votingStatus[item?.id] == false ? (
+                <>
+                  <div
+                    className={`text-text-light text-sm min-w-[70px] mt-[7px] border-2  opacity-25 cursor-not-allowed flex items-center justify-center gap-1 rounded-md px-2 py-2 w-32`}
+                  >
+                    <img src={heartFill} alt="Vote" />
+                    <Text>{item?.total_votes || 0}</Text>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleVote(e, item?.id);
+                    }}
+                    className={`text-text-light ${
+                      votingStatus[item?.id] ? "" : ""
+                    } text-sm min-w-[70px] mt-[7px] border-2 border-text-primary flex items-center justify-center gap-1 rounded-md px-2 py-2 w-32`}
+                  >
+                    <img src={heartFill} alt="Vote" />
+                    {votingStatus[item?.id] ? (
+                      <Text>Voting..</Text>
+                    ) : (
+                      <Text>{item?.total_votes || 0}</Text>
+                    )}
+                  </div>
+                </>
+              )}
             </td>
           </tr>
         </React.Fragment>

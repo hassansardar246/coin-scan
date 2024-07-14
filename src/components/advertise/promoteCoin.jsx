@@ -24,39 +24,39 @@ export default function PromoteCoin() {
 
         <section className="flex flex-col gap-12">
           <section className="w-full bg-gradient-to-l from-[#7e58fd] to-[#9655ff] flex xl:flex-row flex-col items-center justify-between">
-            <div className="flex flex-col items-center px-5 py-6 xl:flex-row">
+            <div className="flex flex-col items-start w-full xl:items-center px-10 lg:px-5 py-6 xl:flex-row">
               <span style={style}>
                 <img
                   src="https://coinhunt.cc/assets/misc/accounts_promote.svg"
                   alt=""
                 />
               </span>
-              <div className="flex flex-col items-start gap-1 pt-2 pl-4">
+              <div className="flex flex-col items-start gap-1 pt-2 lg:pl-4">
                 <span className="text-xl font-bold text-white">15,400</span>
                 <span className="text-base font-medium text-white">
                   Average daily users
                 </span>
               </div>
             </div>
-            <div className="flex xl:flex-row items-center flex-col px-10 py-6 border-border border-l-0 border-r-0 xl:border-t-0 xl:border-b-0 border-[0.5px]">
+            <div className="flex xl:flex-row items-start w-full xl:items-center flex-col px-10 lg:px-5 py-6 border-border border-l-0 border-r-0 xl:border-t-0 xl:border-b-0 border-[0.5px]">
               <span style={style}>
                 <img
                   src="https://coinhunt.cc/assets/misc/twitter_promote.svg"
                   alt=""
                 />
               </span>
-              <div class="flex flex-col items-start gap-1 pt-2 pl-4">
+              <div class="flex flex-col items-start gap-1 pt-2 lg:pl-4">
                 <span className="text-xl font-bold text-white">24,500</span>
                 <span className="text-base font-medium text-white">
                   Twitter followers
                 </span>
               </div>
             </div>
-            <div className="flex flex-col px-3 py-6 xl:flex-row items-center">
+            <div className="flex flex-col items-start w-full px-10 lg:px-5 py-6 xl:flex-row xl:items-center">
               <span style={style}>
                 <img src="https://coinhunt.cc/assets/misc/mail.svg" alt="" />
               </span>
-              <div className="flex flex-col items-start gap-1 px-4 pt-2">
+              <div className="flex flex-col items-start gap-1 lg:px-4 pt-2">
                 <span className="text-xl font-bold text-white">10,262</span>
                 <span class="text-base font-medium text-white">
                   Newsletter subscribers
