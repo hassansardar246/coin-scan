@@ -73,7 +73,7 @@ const Home = () => {
           topTrending={topTrending?.coins}
           presaleListing={presaleListing?.coins}
         /> */}
-        {/* <Promoted coins={coins} refetch={promotedRefetch} /> */}
+        <Promoted coins={coins} refetch={promotedRefetch} />
         {/* <PromoteCoinButton /> */}
         <BestRecords />
         <Partners />
